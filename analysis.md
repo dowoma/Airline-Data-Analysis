@@ -5,13 +5,13 @@
 </style>
 # Data Analysis:
 
-While going through the variables of the dataset, it was realized that the solutions for the following questions could be obtained by analyzing the dataset:
+Questions about the data:
 
--  What are the major busiest airports with maximum flight arrival count?
--  What are the major reasons for delays and cancellations at the busiest airports?
--  Is the major reason for flight delays same as the major reason for cancellations?
--  Is there a specific period (specific months) when delays and cancellations happened the most?
--  Is the amount of delays and cancellations distributed equally nationwide.? If not, which regions are majorly affected.?
+-  What are the busiest airports with highest flight arrival count?
+-  What are the main reasons for delays and cancellations at the busiest airports?
+-  Is the main reason for flight delays same as the main reason for cancellations?
+-  Is there a specific period (specific month(s)) when delays and cancellations happened the most?
+-  Is the amount of delays and cancellations distributed equally nationwide? If not, which regions are majorly affected?
 
 ---
 
@@ -107,7 +107,7 @@ WHERE
 
 <br>
 
-- From the above, it is realized that on **Delta Airlines** has the highest flight frequence on the **Atlanta** airport.
+- **Delta Airlines** has the highest flight frequence on the **Atlanta** airport.
 
 <br>
 
@@ -289,16 +289,6 @@ ORDER BY
 <br>
 <br>
 <br>
-
-### Top Cancellation Reasons at the Most Busiest Airport in practice (Atlanta)
-- Atlanta is one of the largest inter-connect point (airport) for domestic and international flights in USA.
-
-|S No.| Reason | Cancellation (in %) |
-| - | - | - | -
-| 1. | **Weather** | 74.6|
-| 2. | **Airline/Carrier Delays** | 17.4|
-| 3. | **National Air System** | 8|
-
 <br>
 
 <a href="images/8_Cancellation_Reason_top_airport_ATL.png"><img src="images/8_Cancellation_Reason_top_airport_ATL.png" style="min-width: 500px"></a>
