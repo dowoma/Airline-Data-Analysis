@@ -2,9 +2,9 @@
 
 After analyzing the data, a lot of insights have been generated. 
 - Chicago O'Hare International Airport is the busiest airport.
-- Delta Airlines has highest frequency on Atlanta Aiport.
+- Delta Airlines has highest frequency in Atlanta Aiport.
 - 2018 was the year of with maximum delays and cancellations.
-- The most unreliable month in 2018 i.e. with maximum delays and calcellation was March.
+- The most unreliable month in 2018 i.e. with maximum delays and cancellations was March.
 - Most of the delays and cancellations whether in 2018 specifically or in time span (2009-2018) were due to three major reasons:
     - Weather
     - Airline/Carrier Issues
