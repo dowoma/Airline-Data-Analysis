@@ -51,7 +51,8 @@ top_5_airlines AS (
 		2 DESC
 	LIMIT 5
 ),
-airportwise_carrier_cnt AS (
+--Pairs together Top 5 Airports and Top 5 Carriers with Counts 
+airport_carrier_pairing_cnt AS (
 	SELECT
 		main.ORIGIN AS Airport,
 		main.OP_CARRIER AS Carrier,
@@ -74,7 +75,7 @@ result_cte AS (
 		count,
 		RANK() OVER (PARTITION BY Airport ORDER BY count) AS rank
 	FROM
-		airportwise_carrier_cnt
+		airport_carrier_pairing_cnt
 )
 SELECT
 	Airport,
@@ -143,7 +144,7 @@ WITH
     2 DESC
   LIMIT
     5),
-  all_flights AS (
+  airport_carrier_pairing_cnt AS (
   SELECT
     main.ORIGIN AS Airport,
     main.OP_CARRIER AS Carrier,
@@ -158,6 +159,7 @@ WITH
   GROUP BY
     1,
     2 ),
+ -- Same as before up until this CTE
   cancelled_flights AS (
   SELECT
     main.ORIGIN AS Airport,
@@ -175,16 +177,16 @@ WITH
     1,
     2 )
 SELECT
-  af.Airport,
-  af.Carrier,
-  af.all_cnt - cf.cancelled_cnt AS all_cnt,
+  acp.Airport,
+  acp.Carrier,
+  acp.all_cnt - cf.cancelled_cnt AS all_cnt,
   cf.cancelled_cnt
 FROM
-  all_flights af,
+  airport_carrier_pairing_cnt acp,
   cancelled_flights cf
 WHERE
-  af.Airport = cf.Airport
-  AND af.Carrier = cf.Carrier
+  acp.Airport = cf.Airport
+  AND acp.Carrier = cf.Carrier
 ```
 
 ###### Results
