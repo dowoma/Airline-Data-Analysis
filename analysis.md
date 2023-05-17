@@ -67,7 +67,7 @@ airportwise_carrier_cnt AS (
 		1,
 		2
 ),
-resut_cte AS (
+result_cte AS (
 	SELECT
 		Airport,
 		Carrier,
@@ -81,7 +81,7 @@ SELECT
 	Carrier,
 	count
 FROM
-	resut_cte
+	result_cte
 WHERE
 	rank < 6
 ```
